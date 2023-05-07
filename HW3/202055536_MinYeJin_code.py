@@ -70,8 +70,8 @@ def sobel_filters(img):
     Hints:
         - Use np.hypot and np.arctan2 to calculate square root and arctan
     """
-    x_filter = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
-    y_filter = np.array([[1, 2, 1], [0, 0, 0], [-1, -2, -1]])
+    x_filter = np.array([[1, 0, -1], [2, 0, -2], [1, 0, -1]])
+    y_filter = np.array([[-1, -2, -1], [0, 0, 0], [1, 2, 1]])
 
     Ix = convolve2d(img, x_filter)
     Iy = convolve2d(img, y_filter)
